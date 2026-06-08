@@ -1,0 +1,29 @@
+# Identify the Pipeline in the git hub actions
+name: CI Pipeline
+
+# This on property will defined the trigger event in github to start the pipeline
+on:
+  push: # push will be the action
+    branches: [main] # only work when push something to this branche
+
+# Jobs is a group of steps that run together
+# multiple action that executed in a sequence
+jobs:
+  build:
+    runs-on: ubundu-latest
+
+  # These steps executed one after another
+  steps:
+    - name: Checkout code
+      uses: actions/checkout@v5 # here we are using prebuild git hub action
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18
+
+    - name: Install dependencies
+      uses: npm Install
+
+    - name: Run tests
+      uses: npm test # we use our manual test normaly use jest for this
