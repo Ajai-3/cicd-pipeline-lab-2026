@@ -10,7 +10,7 @@ on:
 # multiple action that executed in a sequence
 jobs:
   build:
-    runs-on: ubundu-latest
+    runs-on: ubuntu-latest
 
   # These steps executed one after another
   steps:
@@ -23,7 +23,7 @@ jobs:
         node-version: 18
 
     - name: Install dependencies
-      uses: npm Install
+      run: npm Install
 
     - name: Run tests
-      uses: npm test # we use our manual test normaly use jest for this
+      run: npm test # we use our manual test normaly use jest for this
