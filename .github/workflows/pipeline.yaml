@@ -20,12 +20,14 @@ jobs:
         uses: actions/checkout@v5 # here we are using prebuild git hub action
 
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20
 
       - name: Install dependencies
-        run: npm Install
+        working-directory: ./example/01-basic
+        run: npm install
 
       - name: Run tests
+        working-directory: ./example/01-basic
         run: npm test # we use our manual test normaly use jest for this
