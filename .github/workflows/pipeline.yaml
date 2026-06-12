@@ -31,3 +31,5 @@ jobs:
       - name: Run tests
         working-directory: ./example/01-basic
         run: npm test # we use our manual test normaly use jest for this
+
+
