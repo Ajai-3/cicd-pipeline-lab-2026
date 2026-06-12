@@ -1,0 +1,2 @@
+# <img src="https://cdn.simpleicons.org/githubactions/2088FF" width="40" height="40" /> CI/CD - Complete Documentation
+This documentation covers everything you need to know about CI/CD. While it is primarily known for automating code deployments, it is a powerful set of practices that automatically handles the integration, testing, and delivery of your software. After reading this, you will fully understand how to use it to keep your development cycles running smoothly, reliably, and at high velocity.
